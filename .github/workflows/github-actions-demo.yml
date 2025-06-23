@@ -26,3 +26,10 @@ jobs:
           esp_idf_version: v5.4
           target: esp32s3
           path: 'examples/human_face_recognition_mqtt_simple'
+      - name: esp-idf unit test build
+        uses: espressif/esp-idf-ci-action@v1
+        with:
+          esp_idf_version: v5.4
+          target: esp32s3
+          path: 'examples/human_face_recognition_mqtt_simple'
+          command: idf.py -T all build
